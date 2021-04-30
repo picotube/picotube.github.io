@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouds</title>
+    <link rel="stylesheet" href="Clouds.css">
+</head>
+
+<body>
+    <header>
+        <div class="toggle"><a href="../../index.html"><img src="../../Other Images/toggle.png" alt=""></a></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2><span>Clouds</span></h2>
+            <p>Young musician Zach Sobiech discovers his cancer has spread, leaving him just a few months to live. With limited time, he follows his dream and makes an album, unaware that it will soon be a viral music phenomenon.
+            </p>
+            <a href="#" class="play" onclick="toggle()"><img src="../../Other Images/play.png" alt="Watch Now">Watch Now</a>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="Video.mp4" controls="true"></video>
+        <img src="../../Other Images/close.png" alt="Close" onclick="toggle()" class="close">
+    </div>
+
+    <script>
+        function toggle(){
+            var trailer = document.querySelector('.trailer');
+            let video = document.querySelector('.video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+
+</html>
